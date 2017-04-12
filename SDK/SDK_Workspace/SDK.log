@@ -137,3 +137,24 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:32:39.349 INFO  - Processing command line option -hwspec D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Export\hw\system.xml. 
+09:32:41.985 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Export\hw\system.xml. 
+09:32:42.079 INFO  - Copied contents of D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+09:32:42.079 INFO  - Copied contents of D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:32:42.094 INFO  - Copied contents of D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:32:42.609 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:32:44.122 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:32:45.807 INFO  - Updating hardware inferred compiler options for hello_world. 
+09:32:45.823 INFO  - Clearing existing target manager status. 
+09:41:21.631 INFO  - FPGA configured successfully with bitstream "D:/RA512014/LPRS2/lab5-master/lab5-master/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:56:04.851 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:56:53.120 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:03:09.688 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:03:40.061 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:06:52.163 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:07:04.394 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:07:23.068 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:07:51.788 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:08:05.876 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:08:23.583 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
