@@ -1450,3 +1450,21 @@ Xilinx Software Development Kit
 Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Done!
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Wed Apr 12 12:38:11 2017
+ make -f system.make exporttosdk started...
+make: Ništa za napraviti za `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 12 12:38:12 2017
+ xsdk.exe -hwspec D:\RA512014\LPRS2\lab5\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!

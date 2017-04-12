@@ -1,4 +1,4 @@
-09:41:22 **** Auto Build of project hello_world_bsp ****
+12:39:26 **** Auto Build of project hello_world_bsp ****
 make -k all 
 libgen -hw ../basic_system_hw_platform/system.xml\
 	       -lp D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system\
@@ -14,16 +14,16 @@ D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system -pe microblaze_0 -log
 libgen.log system.mss 
 
 ERROR:EDK:3323 -
-   D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Workspace\hello_world_bsp\s
-   ystem.mss line 51 - Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the
-   driver vga_periph_mem 1.00.a
+   D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss line 51 -
+   Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the driver vga_periph_mem
+   1.00.a
 INFO:EDK:1040 - Directories Searched :
   -
-D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Workspace\hello_world_bsp\driv
-ers/vga_periph_mem_v1_00_a/data
+D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\drivers/vga_periph_mem_
+v1_00_a/data
   -
-D:\RA512014\LPRS2\lab5-master\lab5-master\SDK\SDK_Workspace\hello_world_bsp\pcor
-es/vga_periph_mem_v1_00_a/data
+D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\pcores/vga_periph_mem_v
+1_00_a/data
   -
 D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\drivers/vga_periph_mem_v
 1_00_a/data
@@ -50,5 +50,5 @@ ERROR:EDK:1204 - Errors occured while creating Software System.
 make: *** [microblaze_0/lib/libxil.a] Greška 2
 make: Meta `all' nije ponovo izraðen zbog grešaka.
 
-09:41:23 Build Finished (took 1s.14ms)
+12:39:27 Build Finished (took 842ms)
 
