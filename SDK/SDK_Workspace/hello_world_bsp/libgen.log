@@ -7,16 +7,16 @@ D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system -pe microblaze_0 -log
 libgen.log system.mss 
 
 ERROR:EDK:3323 -
-   D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss line 51 -
-   Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the driver vga_periph_mem
-   1.00.a
+   C:\materija\RA29-2014\zad2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss
+   line 51 - Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the driver
+   vga_periph_mem 1.00.a
 INFO:EDK:1040 - Directories Searched :
   -
-D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\drivers/vga_periph_mem_
-v1_00_a/data
+C:\materija\RA29-2014\zad2\lab5\SDK\SDK_Workspace\hello_world_bsp\drivers/vga_pe
+riph_mem_v1_00_a/data
   -
-D:\RA512014\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\pcores/vga_periph_mem_v
-1_00_a/data
+C:\materija\RA29-2014\zad2\lab5\SDK\SDK_Workspace\hello_world_bsp\pcores/vga_per
+iph_mem_v1_00_a/data
   -
 D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\drivers/vga_periph_mem_v
 1_00_a/data
