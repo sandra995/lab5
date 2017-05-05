@@ -1,4 +1,4 @@
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 -- user_logic.vhd - entity/architecture pair
 ------------------------------------------------------------------------------
 --
@@ -113,6 +113,11 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     --USER ports added here
+	-- SIGNALI ZA OVU VEZBU --
+  
+  
+	
+	
     clk_i          : in  std_logic;
     reset_n_i      : in  std_logic;
     --
@@ -191,6 +196,7 @@ architecture IMP of user_logic is
   constant REG_ADDR_04       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 4, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_05       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 5, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_06       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 6, GRAPH_MEM_ADDR_WIDTH);
+  constant REG_ADDR_07       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 7, GRAPH_MEM_ADDR_WIDTH);
   
   constant update_period     : std_logic_vector(31 downto 0) := conv_std_logic_vector(1, 32);
   
@@ -254,6 +260,7 @@ architecture IMP of user_logic is
       red_o               : out std_logic_vector(7 downto 0);
       green_o             : out std_logic_vector(7 downto 0);
       blue_o              : out std_logic_vector(7 downto 0)
+		vga_irq				  : out std_logic;
     );
   end component;
   
@@ -321,9 +328,41 @@ architecture IMP of user_logic is
   signal unit_sel            : std_logic_vector(1 downto 0);
   signal unit_addr           : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0);--15+6+1
   signal reg_we              : std_logic;
+  
+  signal v_sync_counter_tc : std_logic_vector(31 downto 0);
+  signal en : std_logic;
+  signal tc : std_logic;
+  signal timer_cnt : current_v_sync_counter_value(31 downto 0);
 
 begin
   --USER logic implementation added here
+  
+  process(vga_vsync_s)
+	begin
+		if(Bus2IP_Resetn='0') then
+			timer_cnt <= 0;
+		elsif(rising_edge(vga_vsync_s)) then
+			if(timer_cnt = v_sync_counter_tc) then
+				timer_cnt <= 0;
+				tc <= '1';
+			else
+				timer_cnt <= timer_cnt + 1;
+			end if;
+		end if;
+	end process;
+	
+	process( Bus2IP_Clk ) is
+		begin
+			if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
+				if Bus2IP_Resetn = '0' then
+					vga_irq <= '0';
+				else
+					vga_irq <= tc;
+				end if;
+			end if;
+		end process;
+	
+  
   unit_sel  <= Bus2IP_Addr(25 downto 24);
   unit_addr <= Bus2IP_Addr(GRAPH_MEM_ADDR_WIDTH+2-1 downto 2);
 
@@ -359,6 +398,7 @@ begin
             when REG_ADDR_04 => foreground_color <= Bus2IP_Data(23 downto 0);
             when REG_ADDR_05 => background_color <= Bus2IP_Data(23 downto 0);
             when REG_ADDR_06 => frame_color      <= Bus2IP_Data(23 downto 0);
+		    	when REG_ADDR_07 => v_sync_counter_tc <= Bus2IP_Data(23 downto 0);
             when others => null;
           end case;
         end if;

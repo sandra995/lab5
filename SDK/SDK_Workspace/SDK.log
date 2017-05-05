@@ -227,3 +227,4 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 	at com.xilinx.sdk.targetmanager.internal.TM.setResetOnRun(Unknown Source)
 	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
 
+09:03:36.243 ERROR - Workspace location C:\materija\RA29-2014\New folder (6)\lab5\SDK\SDK_Workspace contains spaces. Please switch to a workspace without spaces in its path. 
